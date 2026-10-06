@@ -1,0 +1,166 @@
+/*
+Theme Name: Lumina
+Theme URI: https://github.com/Nourhb/lumina-laser-theme
+Author: Nour El Houda Bouajila
+Author URI: https://nour-el-houda-bouajila.rf.gd/
+Description: Lumina is a clean, premium Full Site Editing theme crafted for laser and aesthetic clinics. Crisp clinical whites, soft teal and violet accents, treatment cards with pricing, technology showcases, specialist profiles, and consultation booking patterns — everything a modern med-spa needs to earn trust online.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lumina
+Tags: full-site-editing, block-patterns, block-styles, custom-colors, custom-logo, custom-menu, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready, wide-blocks, style-variations, grid-layout, one-column, two-columns, health, business
+*/
+
+/* ---------------------------------------------------------
+   Lumina — front-end polish
+   Clinical whites, soft teal, violet glow.
+---------------------------------------------------------- */
+
+:root {
+	--lumina-teal: #2aa8a0;
+	--lumina-teal-dark: #1e7f79;
+	--lumina-violet: #7c5cd6;
+	--lumina-slate: #1f2a37;
+}
+
+/* Smooth anchors */
+html {
+	scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* Card lift on hover */
+.lumina-card {
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.lumina-card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 24px 48px -16px rgba(31, 42, 55, 0.18);
+}
+
+/* Soft glow behind hero media */
+.lumina-glow {
+	position: relative;
+}
+
+.lumina-glow::before {
+	content: "";
+	position: absolute;
+	inset: -8%;
+	background: radial-gradient(closest-side, rgba(42, 168, 160, 0.22), rgba(124, 92, 214, 0.12), transparent 70%);
+	filter: blur(10px);
+	z-index: -1;
+	border-radius: 50%;
+}
+
+/* Reveal on scroll */
+.lumina-reveal {
+	opacity: 0;
+	transform: translateY(24px);
+	transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.lumina-reveal.is-visible {
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lumina-reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
+
+/* Count-up numbers */
+.lumina-count {
+	font-variant-numeric: tabular-nums;
+}
+
+/* Treatment price tag */
+.lumina-price {
+	display: inline-block;
+	padding: 0.35rem 0.9rem;
+	border-radius: 999px;
+	background: rgba(42, 168, 160, 0.12);
+	color: var(--lumina-teal-dark);
+	font-weight: 700;
+	font-size: 0.9rem;
+	letter-spacing: 0.02em;
+}
+
+/* Back to top */
+.lumina-top {
+	position: fixed;
+	right: 1.25rem;
+	bottom: 1.25rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	border: none;
+	background: var(--lumina-teal);
+	color: #fff;
+	font-size: 1.25rem;
+	line-height: 1;
+	cursor: pointer;
+	box-shadow: 0 12px 24px -8px rgba(42, 168, 160, 0.55);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(12px);
+	transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+	z-index: 60;
+}
+
+.lumina-top.is-visible {
+	opacity: 1;
+	visibility: visible;
+	transform: none;
+}
+
+.lumina-top:hover {
+	background: var(--lumina-teal-dark);
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+	outline: 3px solid rgba(124, 92, 214, 0.55);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+/* Skip link */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	background: var(--lumina-slate);
+	color: #fff;
+	padding: 0.75rem 1.25rem;
+	z-index: 100;
+	border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+	left: 0;
+}
+
+/* Print: hide decorative chrome */
+@media print {
+	.lumina-top,
+	.wp-block-navigation,
+	.site-topbar {
+		display: none !important;
+	}
+}

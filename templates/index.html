@@ -1,0 +1,45 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+	<!-- wp:heading {"level":1} -->
+	<h1 class="wp-block-heading">Journal</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:paragraph -->
+	<p>Skin science, treatment guides, and glow tips from the Lumina clinic team.</p>
+	<!-- /wp:paragraph -->
+
+	<!-- wp:query {"queryId":1,"query":{"perPage":9,"postType":"post","order":"desc","orderBy":"date"}} -->
+	<div class="wp-block-query">
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":3}} -->
+		<!-- wp:group {"className":"lumina-card","style":{"border":{"radius":"18px"},"spacing":{"padding":{"top":"0","right":"0","bottom":"1.5rem","left":"0"}}},"backgroundColor":"base","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group lumina-card has-base-background-color has-background" style="border-radius:18px;padding-top:0;padding-right:0;padding-bottom:1.5rem;padding-left:0">
+			<!-- wp:post-featured-image {"isLink":true,"style":{"border":{"radius":"18px 18px 0 0"}}} /-->
+			<!-- wp:group {"style":{"spacing":{"padding":{"right":"1.5rem","left":"1.5rem"}}},"layout":{"type":"constrained"}} -->
+			<div class="wp-block-group" style="padding-right:1.5rem;padding-left:1.5rem">
+				<!-- wp:post-title {"isLink":true,"level":3,"fontSize":"large"} /-->
+				<!-- wp:post-excerpt {"moreText":"Read more"} /-->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:group -->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<!-- wp:query-pagination-previous /-->
+		<!-- wp:query-pagination-numbers /-->
+		<!-- wp:query-pagination-next /-->
+		<!-- /wp:query-pagination -->
+
+		<!-- wp:query-no-results -->
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">No articles yet — check back soon.</p>
+		<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
