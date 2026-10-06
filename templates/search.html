@@ -1,0 +1,32 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group">
+	<!-- wp:heading {"level":1} -->
+	<h1 class="wp-block-heading">Search results</h1>
+	<!-- /wp:heading -->
+
+	<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"Search treatments, articles…","buttonText":"Search"} /-->
+
+	<!-- wp:query {"queryId":3,"query":{"perPage":10,"postType":"post","order":"desc","orderBy":"relevance","inherit":true}} -->
+	<div class="wp-block-query">
+		<!-- wp:post-template -->
+		<!-- wp:group {"style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"}},"border":{"bottom":{"color":"var(--wp--preset--color--line)","width":"1px"}}}} -->
+		<div class="wp-block-group" style="border-bottom-color:var(--wp--preset--color--line);border-bottom-width:1px;padding-top:1.5rem;padding-bottom:1.5rem">
+			<!-- wp:post-title {"isLink":true,"level":2,"fontSize":"x-large"} /-->
+			<!-- wp:post-excerpt {"moreText":"Read more"} /-->
+		</div>
+		<!-- /wp:group -->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-no-results -->
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">Nothing matched your search. Try "laser", "facial" or "acne".</p>
+		<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
