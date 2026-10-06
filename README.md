@@ -55,6 +55,16 @@ No plugins required. Google Fonts (Fraunces + Manrope) load automatically; the t
 ### 1.0.0
 - Initial release: 8 templates, 2 template parts, 10 block patterns, Noir style variation, theme.js interactions, full a11y pass.
 
+## Design Previews
+![lumina-main](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-main.png)
+![lumina-treatments](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-treatments.png)
+![lumina-mobile](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-mobile.png)
+![lumina-noir](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-noir.png)
+![lumina-specialists](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-specialists.png)
+![lumina-pricing](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-pricing.png)
+![lumina-results](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-results.png)
+![lumina-consultation](https://nour-el-houda-bouajila.rf.gd/wp-content/uploads/2026/10/lumina-consultation-scaled.png)
+
 ## License
 
 GNU General Public License v2 or later — see `LICENSE`.
